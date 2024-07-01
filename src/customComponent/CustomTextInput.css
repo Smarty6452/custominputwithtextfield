@@ -1,0 +1,104 @@
+.material-textfield {
+  position: relative;
+  margin: 5rem 0;
+}
+
+.material-textfield input.custom-input,
+.material-textfield textarea.custom-input {
+  font-size: 0.875rem; /* text-sm */
+  outline: none;
+  border: 1px solid #cbd5e1; /* border-blue-gray-200 */
+  border-radius: 7px; /* rounded-[7px] */
+  padding: 0.625rem 0.75rem; /* px-3 py-2.5 */
+  color: #4a585f; /* text-blue-gray-700 */
+  transition: all 0.2s; /* transition-all */
+  width: 100%;
+  background-color: transparent; /* bg-transparent */
+}
+
+.material-textfield input.custom-input:focus,
+.material-textfield textarea.custom-input:focus {
+  border-color: #212121; /* focus:border-gray-900 */
+  border-width: 2px; /* focus:border-2 */
+}
+
+.material-textfield input.custom-input.exceed-limit,
+.material-textfield textarea.custom-input.exceed-limit {
+  border-color: rgb(231, 48, 48);
+}
+
+.material-textfield textarea.text-field {
+  height: 100px; /* Adjusted height for text field */
+  text-align: left; /* Align text to the left */
+  padding-top: 1rem; /* Adjust padding for multi-line text */
+  padding-bottom: 1rem; /* Adjust padding for multi-line text */
+}
+
+.material-textfield label.custom-label {
+  position: absolute;
+  font-size: 0.775rem; /* text-sm */
+  left: 0.75rem;
+  top: 0.75rem; /* Initial top position */
+  background-color: transparent;
+  color: #4a585f; /* text-blue-gray-500 */
+  padding: 0 0.3rem;
+  transition: all 0.2s; /* transition-all */
+  pointer-events: none;
+}
+
+.material-textfield input.custom-input:focus + label.custom-label,
+.material-textfield
+  input.custom-input:not(:placeholder-shown)
+  + label.custom-label,
+.material-textfield textarea.custom-input:focus + label.custom-label,
+.material-textfield
+  textarea.custom-input:not(:placeholder-shown)
+  + label.custom-label {
+  color: #4a585f; /* peer-focus:text-gray-900 */
+  top: -0.4rem; /* -top-1.5 */
+  left: 0.75rem;
+  background-color: white;
+  transform: scale(0.9);
+}
+
+.material-textfield .char-limit {
+  position: absolute;
+  background-color: white;
+  color: #4a585f !important;
+  right: 0.4rem;
+  top: -0.7rem;
+  font-size: 0.75rem; /* text-xs */
+  color: rgb(18, 13, 13); /* text-dark */
+  margin-top: 5px;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+.material-textfield .char-limit.exceed-limit {
+  color: red;
+}
+
+.material-textfield .add-button {
+  position: absolute;
+  top: -0.7rem;
+  right: -0.6rem; /* Adjusted right position */
+  background-color: #ffff;
+  border-radius: 50%;
+  padding: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tooltip {
+  position: absolute;
+  top: -2rem;
+  right: -2.6rem;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
